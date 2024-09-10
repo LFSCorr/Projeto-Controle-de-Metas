@@ -1,7 +1,7 @@
 ## Linguagem de programação
 
-maneira de dar instrução ao computador.
-Como um lego, você ira utilizar peças para criar algoritmos, ou seja, para resolver problemas.
+- Maneira de dar instrução ao computador.
+- Como um lego, você ira utilizar peças para criar algoritmos, ou seja, para resolver problemas.
 
   **Algoritmo**: Sequência de passos lógica e finita para resolução de um problemea.
 
@@ -28,9 +28,31 @@ Como um lego, você ira utilizar peças para criar algoritmos, ou seja, para res
 
 
   ## Tipos de dados
+
   - Strings (textos): "" '' ``
   - Number: 2, 1.4 ...
+  - Boolean: true or false
 
   ## Operadores 
 
-  - Operador de atribição de valor
+  - Operador de atribição de valor (```let metas = {}```)
+  - Operador de contatenação + (```metas.log(metas(1) + metas(0))```)
+
+  ## Estrutura de dados:
+
+  ## Arrays:
+
+  - Uma lista que contém qualquer tipo de dado (```let meta = {}```)
+
+  ## Objetos:
+
+  - Atributos e métodos
+  - Criação e manipulação de objetos
+  - Acesso a propriedade de objetos
+
+  ## Functions 
+
+   - Criar
+   - Executar
+   - Arrow function (```const criarMeta = () => {}```)
+   - Named function (```function criarMeta() {}```)
