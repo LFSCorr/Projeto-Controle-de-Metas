@@ -79,7 +79,14 @@
 
    - Importação de módulos (require, CommonJS) (```npm install inquirer```)
    - Biblioteca 'inquirer' para criar prompts interativos
+   - FS (file system) (```const fs = require("fs").promises```)
+
+   ## JSON
+
+   - Javascrip object notation
+   - JSON.parse (Transforma de JSON para JS) (```metas = JSON.parse(dados)```)
+   - JSON.stringify (Transforma de JS para JSON) (```await fs.writeFile("metas.json", JSON.stringify(metas, null, 2))```)
 
    ## Programação assíncrona e Promises:
 
-   - Uso de funções assíncronas (async/await) (Espera a resposta do usuario, async necessario para await funcionar)
+   - Uso de funções assíncronas (async/await) (Espera a resposta do usuario, async necessario para await funciSonar)
