@@ -38,18 +38,25 @@
   - Operador de atribição de valor (```let metas = {}```)
   - Operador de contatenação + (```metas.log(metas(1) + metas(0))```)
   - Operadores de comparação == (```if(meta.length == 0){}```, ```if(meta.length != 0)```, ```if(meta.length > 0)```, ```if(meta.length < 0)```)
+  - Spread operator: ... (```choices: [...Realizadas]```)
 
   ## Estrutura de dados:
 
   ## Arrays:
 
   - Uma lista que contém qualquer tipo de dado (```let meta = {}```,```choices []```)
+  - Métodos de array (Higher Order Functions):
+    - Push (```XX.push({value: XX, checked:false})```)
+    - Find (```const XX = XX.find((m) => {return m.value == resposta}```)
+    - forEach (```metas.forEach((m) => {m.checked = false)}```)
+    - Filter (```const XX = metas.filter()```)
 
   ## Objetos:
 
   - Atributos e métodos
   - Criação e manipulação de objetos
   - Acesso a propriedade de objetos
+  - No JS todu pode ser um objeto
 
   ## Functions:
 
