@@ -1,5 +1,6 @@
 const { select, input, checkbox } = require('@inquirer/prompts')
 
+let mensagem = "Bem vindo ao APP de Metas";
 let meta = {
   value: "Tomar 3L de água por dia",
   checked: false
@@ -9,13 +10,15 @@ let metas = [meta]
 const cadastrarMeta = async () => {
   const meta = await input({ message: "Digite a meta:"})
 if(meta.length == 0){
-  console.log("A meta não pode ser vazia")
+  mensagem = "A meta não pode ser vazia"
   return
 }
 
 metas.push({
   value: meta, checked:false
 })
+
+mensagem = "Meta cadastrada com sucesso"
 
 }
 
@@ -31,7 +34,7 @@ const listarMetas = async () => {
   })
   
   if(respostas.length == 0){
-    console.log("Nenhuma meta selecionada")
+    mensagem = "Nenhuma meta selecionada"
     return
   }
 
@@ -42,7 +45,7 @@ const listarMetas = async () => {
     meta.checked = true
   })
 
-  console.log("Meta(s) marcada(s) concluida(s)")
+  mensagem = "Meta(s) marcada(s) concluida(s)"
 }
 
 const metasRealizadas = async () => {
@@ -51,7 +54,7 @@ const metasRealizadas = async () => {
   })
 
   if(Realizadas.length == 0) {
-    console.log('Não existem metas realizadas! :(')
+    mensagem ='Não existem metas realizadas! :('
     return
   }
 
@@ -67,7 +70,7 @@ const metasRealizadas = async () => {
     })
 
     if(Abertas.length == 0) {
-      console.log("Não existem metas abertas! :)")
+      mensagem = "Não existem metas abertas! :)"
     }
 
     await select({
@@ -85,9 +88,9 @@ const metasRealizadas = async () => {
       choices: [...metasDesmarcadas],
       instructions: false
     })
-    if(itemsADeletar.legth == 0) {
-      console.log("Nenhum item para deletar")
-    }
+    if(itemsADeletar.length == 0) {
+      mensagem = "Nenhum item para deletar";
+     }
 
     itemsADeletar.forEach((item) => {
       metas = metas.filter((meta) => {
@@ -95,11 +98,24 @@ const metasRealizadas = async () => {
       })
     })
 
-    console.log("Meta(s) deletada(s) com sucesso!")
+    mensagem = "Meta(s) deletada(s) com sucesso!"
+  }
+
+  const mostrarMensagem = () => {
+    console.clear();
+
+    if(mensagem != "") {
+      console.log(mensagem)
+      console.log("")
+      mensagem = ""
+      
+    }
   }
 
 const start = async () => {
   while(true){
+
+    mostrarMensagem()
     
     const opcao = await select({
       message: "Menu >",
@@ -134,7 +150,6 @@ const start = async () => {
     switch(opcao) {
       case "Cadastrar":
         await cadastrarMeta()
-        console.log(metas)
         break
       case "Listar":
         await listarMetas()

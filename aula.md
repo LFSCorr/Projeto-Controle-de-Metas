@@ -50,6 +50,7 @@
     - Find (```const XX = XX.find((m) => {return m.value == resposta}```)
     - forEach (```metas.forEach((m) => {m.checked = false)}```)
     - Filter (```const XX = metas.filter()```)
+    - Map (```const metasDesmarcadas = metas.map((meta) => {}```)
 
   ## Objetos:
 
