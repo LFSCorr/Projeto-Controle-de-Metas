@@ -58,8 +58,15 @@
    - Named function (```function criarMeta() {}```)
 
    ## Estrutura de repetição
+
+   - Await (Esperar a resposta do usuario)   
    - While (```while() {}```)
 
    ## Condicionais
 
    - Switch (```switch() {}```)
+
+   ## Módulos em Node.js
+
+   - Importação de módulos (require, CommonJS) (```npm install inquirer```)
+   - Biblioteca 'inquirer' para criar prompts interativos
