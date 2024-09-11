@@ -56,3 +56,10 @@
    - Executar
    - Arrow function (```const criarMeta = () => {}```)
    - Named function (```function criarMeta() {}```)
+
+   ## Estrutura de repetição
+   - While (```while() {}```)
+
+   ## Condicionais
+
+   - Switch (```switch() {}```)
